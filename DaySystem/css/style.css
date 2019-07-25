@@ -1,0 +1,86 @@
+﻿/*先将内容页隐藏*/
+#swiper {
+display:none;
+
+}
+
+
+/*=========================底部导航==========================*/
+
+/*nav样式*/
+#nav {
+	position: absolute; /*绝对定位*/
+	bottom: 0;
+	width: 100%;
+}
+
+	/*nav>ul样式*/
+	#nav > ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: -webkit-box;
+	}
+		/*nav>ul li样式*/
+		#nav > ul > li {
+			-webkit-box-flex: 1;
+			text-align: center;
+			height: 60px;
+			/*background: #87f0d3;*/
+			border-right: 1px solid #0094ff;
+			border-top: 1px solid #399ef3;
+			box-sizing: border-box; /*内容包含边框*/
+			background-repeat: no-repeat;/*图片拉伸*/
+			background-size:70% 70%;
+			background-position:50% 1%;
+			line-height:90px;
+		}
+
+		/*默认选中样式*/
+		#nav>ul>li.selected {
+			border-bottom:8px solid #0094ff;
+		}
+		
+			/*背景图片*/
+			#nav > ul > li:nth-child(1) {
+				background-image: url("../svg/home.svg");
+			}
+
+			#nav > ul > li:nth-child(2) {
+				background-image: url("../svg/sales.svg");
+			}
+
+			#nav > ul > li:nth-child(3) {
+				background-image: url("../svg/pie_chart.svg");
+			}
+
+			#nav > ul > li:nth-child(4) {
+				background-image: url("../svg/settings.svg");
+				border-right: none;
+			}
+/*=========================底部导航==========================*/
+
+.swiper-slide {
+	height: calc(100vh - 60px);
+}
+/*=========================设置提示语========================*/
+/*提示语隐藏*/
+#no-support {
+	display: none;
+}
+
+/*当处于PC端的情况下，提示语出现*/
+ @media(min-width:767px) {
+	#no-support {
+	display:block;
+	font-size:1.8rem;
+	text-align:center;
+	line-height:100vh;
+	}
+	#container {
+	display:none;
+	}
+}
+/*=========================设置提示语========================*/
+
+
