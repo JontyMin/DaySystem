@@ -1,12 +1,8 @@
 ﻿/*先将内容页隐藏*/
 #swiper {
-display:none;
-
+	/*display:none;*/
 }
-
-
 /*=========================底部导航==========================*/
-
 /*nav样式*/
 #nav {
 	position: absolute; /*绝对定位*/
@@ -30,17 +26,17 @@ display:none;
 			border-right: 1px solid #0094ff;
 			border-top: 1px solid #399ef3;
 			box-sizing: border-box; /*内容包含边框*/
-			background-repeat: no-repeat;/*图片拉伸*/
-			background-size:70% 70%;
-			background-position:50% 1%;
-			line-height:90px;
+			background-repeat: no-repeat; /*图片拉伸*/
+			background-size: 70% 70%;
+			background-position: 50% 1%;
+			line-height: 90px;
 		}
 
-		/*默认选中样式*/
-		#nav>ul>li.selected {
-			border-bottom:8px solid #0094ff;
-		}
-		
+			/*默认选中样式*/
+			#nav > ul > li.selected {
+				border-bottom: 8px solid #0094ff;
+			}
+
 			/*背景图片*/
 			#nav > ul > li:nth-child(1) {
 				background-image: url("../svg/home.svg");
@@ -60,9 +56,67 @@ display:none;
 			}
 /*=========================底部导航==========================*/
 
-.swiper-slide {
+
+
+
+/*=========================记账==============================*/
+#section1 #section1-swiper .swiper-slide {
+	height: auto;
+}
+
+#section1 {
 	height: calc(100vh - 60px);
 }
+
+/*记账头部*/
+	#section1 > header {
+		height: 150px;
+		padding-top: 10px;
+		box-sizing: border-box;
+		background:#bff5f1;
+	}
+
+		#section1 > header dl {
+			margin: 0;
+		}
+
+		#section1 > header dt:first-child {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			border: 1px solid red;
+			border-radius: 30px;
+			height: 70px;
+			/*line-height:70px;*/
+			color: #aaa;
+			background-image: url(../svg/sales.svg);
+			background-repeat: no-repeat;
+			background-size: 60px 60px;
+			background-position: 50px 8px;
+			font-family: "黑体";
+			font-size: 16px;
+			line-height: 30px;
+			padding-left: 60px;
+			box-sizing: border-box;
+		}
+
+		/*收入和支出*/
+		#section1 > header dt:nth-of-type(2), #section1 > header dt:nth-of-type(3) {
+			display: inline-block;
+			width: 49%;
+			text-align: center;
+		}
+
+		#section1 > header dd, #btn-new {
+			display: none;
+		}
+/*=========================记账==============================*/
+
+
+
+
+
+
 /*=========================设置提示语========================*/
 /*提示语隐藏*/
 #no-support {
@@ -70,15 +124,16 @@ display:none;
 }
 
 /*当处于PC端的情况下，提示语出现*/
- @media(min-width:767px) {
+@media(min-width:767px) {
 	#no-support {
-	display:block;
-	font-size:1.8rem;
-	text-align:center;
-	line-height:100vh;
+		display: block;
+		font-size: 1.8rem;
+		text-align: center;
+		line-height: 100vh;
 	}
+
 	#container {
-	display:none;
+		display: none;
 	}
 }
 /*=========================设置提示语========================*/
