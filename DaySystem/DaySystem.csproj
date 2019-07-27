@@ -69,7 +69,6 @@
   <ItemGroup>
     <Content Include="css\mdialog.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="css\rocket.css" />
     <Content Include="css\style.css" />
     <Content Include="css\swiper.css" />
     <Content Include="css\swiper.min.css" />
@@ -88,7 +87,6 @@
     <Content Include="js\mdialog.js" />
     <Content Include="js\swiper.js" />
     <Content Include="js\swiper.min.js" />
-    <Content Include="rocket.html" />
     <Content Include="svg\calendar.svg" />
     <Content Include="svg\database.svg" />
     <Content Include="svg\home.svg" />
