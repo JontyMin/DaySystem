@@ -105,6 +105,7 @@
     <Content Include="svg\type\phone.svg" />
     <Content Include="svg\type\restaurant.svg" />
     <Content Include="Web.config" />
+    <Content Include="天天爱记账.mp4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
