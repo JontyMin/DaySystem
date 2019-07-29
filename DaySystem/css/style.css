@@ -5,7 +5,6 @@
 	list-style: none;
 }
 
-
 /*先将内容页隐藏*/
 #swiper {
 	/*display:none;*/
@@ -86,7 +85,7 @@ header {
 
 /*记账*/
 #section1-swiper {
-	height:calc(100vh - 120px - 60px);
+	height:calc(100vh - 150px - 40px);
 }
 
 /*资金*/
@@ -123,18 +122,10 @@ header {
 
 
 /*=========================记账==============================*/
-/*设置高度*/
-#section1 #section1-swiper .swiper-slide {
-	height: auto;
-}
-
-#section1 {
-	height: calc(100vh - 60px);
-}
 
 /*记账隐藏*/
 #btn-new {
-	display: none;
+	/*display: none;*/
 }
 
 #section1 header::after {
@@ -142,6 +133,7 @@ header {
 	display: block;
 	clear: both; /* 清除浮动 */
 }
+
 /* 当前余额 */
 #section1 dt:nth-of-type(1) {
 	width: 70%;
@@ -235,6 +227,118 @@ header {
 	line-height: 60px;
 	font-size: 24px;
 }
+
+/*小圆点*/
+#section1 li.date > span {
+	background-image: url(svg/icon-day.svg);
+}
+
+#btn-new {
+	display: block;
+	position: absolute;
+	color: transparent;
+	background-image: url(../svg/pencil.svg);
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+	top: 11px;
+	right: 15%;
+	/*border:1px solid #399ef3;*/
+	border-radius: 60px;
+}
+
+#section1 {
+	background-image: url(../svg/sline.svg);
+	background-repeat: no-repeat;
+	background-position-y: 20px;
+}
+
+/*------------------------------------------*/
+/*记账明细*/
+#section1-swiper li {
+	height: 60px;
+}
+
+#section1-swiper li > samp.iconfont {
+	display: block;
+	width: 40px;
+	height: 100%;
+	text-align: center;
+	line-height: 60px;
+}
+
+#section1-swiper li {
+	display: flex;
+}
+
+	#section1-swiper li > time, #section1-swiper li > div {
+		flex: 1;
+	}
+
+#section1-swiper li > time {
+	line-height: 60px;
+	visibility: hidden;
+}
+
+#section1-swiper li > div, #section1-swiper li > div > span, #section1-swiper li > div > p {
+	white-space: nowrap; 
+	overflow: hidden;
+	font-size: 14px;
+}
+
+#section1-swiper li.date > time {
+	visibility: visible;
+	text-align: right;
+}
+	/*画圆点*/
+#section1-swiper li.date > span.iconfont {
+	background-image: url(../svg/icon-day.svg);
+}
+
+#section1-swiper li.date > div {
+	line-height: 60px;
+}
+	/*分割线*/
+	/*#swiper0 li.date {
+    border-top:1px solid #CCCCCC; 
+    }*/
+	/*相关收入*/
+#section1-swiper li.in {
+	flex-direction: row-reverse; /*反转*/
+}
+
+	#section1-swiper li.in > div {
+		text-align: right;
+	}
+/*图标颜色*/
+.color1 {
+	color: #fb7575;
+}
+
+.color2 {
+	color: #3c68c3;
+}
+
+.color3 {
+	color: #ff8968;
+}
+
+.color4 {
+	color: #8bb94a;
+}
+
+.color5 {
+	color: #8a4aa5;
+}
+
+.color6 {
+	color: #e260d0;
+}
+
+
+
+/*#region 修改前的代码 */
+
 /*记账头部*/
 /*#section1 > header {
 	height: 120px;
@@ -265,22 +369,22 @@ header {
 	padding-left: 60px;
 	box-sizing: border-box;
 	}*/
-
 /*收入和支出*/
 /*#section1 > header dt:nth-of-type(2), #section1 > header dt:nth-of-type(3) {
 	display: inline-block;
 	width: 49%;
 	text-align: center;
 	}*/
-
-
-
-
 /*main高度*/
-#section1-swiper {
+/*#section1-swiper {
 	height: calc(100vh - 180px);
-}
+}*/
+
+/*#endregion */
 /*=========================记账==============================*/
+
+
+/*#region 我好难啊 */
 
 /*////////////////////////////////////*/
 /*/ \                              / /*/
@@ -292,9 +396,11 @@ header {
 /*/ /                              \ /*/
 /*////////////////////////////////////*/
 
+/*#endregion */
+
+
 
 /*=========================设置==============================*/
-
 /*#section4 ul {
 	margin: 0;
 	padding: 0;
