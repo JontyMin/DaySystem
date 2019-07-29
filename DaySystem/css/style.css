@@ -1,8 +1,19 @@
-﻿/*先将内容页隐藏*/
+﻿/*重置0点,初始化样式*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/*先将内容页隐藏*/
 #swiper {
 	/*display:none;*/
 }
+
+
 /*=========================底部导航==========================*/
+
 /*nav样式*/
 #nav {
 	position: absolute; /*绝对定位*/
@@ -10,55 +21,109 @@
 	width: 100%;
 }
 
-	/*nav>ul样式*/
-	#nav > ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: -webkit-box;
+/*nav>ul样式*/
+#nav > ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: -webkit-box;
 	}
-		/*nav>ul li样式*/
-		#nav > ul > li {
-			-webkit-box-flex: 1;
-			text-align: center;
-			height: 60px;
-			/*background: #87f0d3;*/
-			border-right: 1px solid #0094ff;
-			border-top: 1px solid #399ef3;
-			box-sizing: border-box; /*内容包含边框*/
-			background-repeat: no-repeat; /*图片拉伸*/
-			background-size: 70% 70%;
-			background-position: 50% 1%;
-			line-height: 90px;
-		}
+/*nav>ul li样式*/
+#nav > ul > li {
+	/*transition: background linear 10s;*/ /*动画*/
+		-webkit-box-flex: 1;
+		text-align: center;
+		height: 60px;
+		/*background: #87f0d3;*/
+		border-right: 1px solid #0094ff;
+		border-top: 1px solid #399ef3;
+		box-sizing: border-box; /*内容包含边框*/
+		background-repeat: no-repeat; /*图片拉伸*/
+		background-size: 70% 70%;
+		background-position: 50% 1%;
+		line-height: 90px;
+	}
 
-			/*默认选中样式*/
-			#nav > ul > li.selected {
-				border-bottom: 8px solid #0094ff;
-			}
+/*默认选中样式*/
+#nav > ul > li.selected {
+		border-bottom: 8px solid #0094ff;
+	}
 
-			/*背景图片*/
-			#nav > ul > li:nth-child(1) {
-				background-image: url("../svg/home.svg");
-			}
+/*背景图片*/
+#nav > ul > li:nth-child(1) {
+		background-image: url("../svg/home.svg");
+	}
 
-			#nav > ul > li:nth-child(2) {
-				background-image: url("../svg/sales.svg");
-			}
+#nav > ul > li:nth-child(2) {
+		background-image: url("../svg/sales.svg");
+	}
 
-			#nav > ul > li:nth-child(3) {
-				background-image: url("../svg/pie_chart.svg");
-			}
-			#nav > ul > li:nth-child(4) {
-				background-image: url("../svg/settings.svg");
-				border-right: none;
-			}
+#nav > ul > li:nth-child(3) {
+		background-image: url("../svg/pie_chart.svg");
+	}
+
+#nav > ul > li:nth-child(4) {
+		background-image: url("../svg/settings.svg");
+		border-right: none;
+	}
+
 /*=========================底部导航==========================*/
 
 
 
 
+/*======================设置内容块高度=======================*/
+
+#container > .swiper-container {
+	height: calc(100vh - 60px);
+}
+
+/*头部*/
+header {
+	height: 120px;
+	width: 100%;
+}
+
+/*记账*/
+#section1-swiper {
+	height:calc(100vh - 120px - 60px);
+}
+
+/*资金*/
+#section2-swiper {
+	height: calc(100vh - 100px - 90px);
+}
+
+/*报表*/
+#section3-swiper {
+	height: calc(100vh - 190px - 20px);
+}
+
+/*设置*/
+#section4-swiper {
+	height: calc(100vh - 190px - 20px);
+}
+
+#section1-swiper .swiper-wrapper, #section2-swiper .swiper-wrapper, #section4-swiper .swiper-wrapper {
+	height: 100%;
+	margin-left: 0px;
+}
+
+#section1-swiper .swiper-slide, #section2-swiper .swiper-slide, #section4-swiper .swiper-slide {
+	font-size: 18px;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+/*======================设置内容块高度=======================*/
+
+
+
+
 /*=========================记账==============================*/
+/*设置高度*/
 #section1 #section1-swiper .swiper-slide {
 	height: auto;
 }
@@ -67,51 +132,151 @@
 	height: calc(100vh - 60px);
 }
 
+/*记账隐藏*/
+#btn-new {
+	display: none;
+}
 
+#section1 header::after {
+	content: '';
+	display: block;
+	clear: both; /* 清除浮动 */
+}
+/* 当前余额 */
+#section1 dt:nth-of-type(1) {
+	width: 70%;
+	margin: 10px auto;
+	height: 60px;
+	border: 1px solid #0094ff; /*边框*/
+	border-radius: 200px; /*圆角*/
+	background-color: #fff;
+	background-image: url(../svg/sales.svg);
+	background-repeat: no-repeat; /*不重复*/
+	background-size: 16%;
+	background-position-y: 5px;
+	background-position-x: 20px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #999;
+	font-size: 20px;
+}
+
+	#section1 dt:nth-of-type(1):active { 
+		background-color: #ccc;
+	}
+
+#section1 dd:nth-of-type(1) {
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #333;
+	font-size: 26px;
+	margin-top: -40px;
+	/* 穿透该层 */
+	pointer-events: none;
+}
+
+/* 本月收入 */
+#section1 dt:nth-of-type(2) {
+	width: 50%;
+	float: left; /*左浮动*/
+	height: 60px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #999;
+	font-size: 20px;
+}
+
+#section1 dd:nth-of-type(2) {
+	width: 50%;
+	position: absolute;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #333;
+	font-size: 26px;
+	margin-top: 24px;
+}
+/* 本月支出 */
+#section1 dt:nth-of-type(3) {
+	width: 50%;
+	float: left; /*左边浮动*/
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #999;
+	font-size: 20px;
+}
+
+#section1 dd:nth-of-type(3) {
+	width: 50%;
+	position: absolute;
+	right: 0;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-family: '微软雅黑';
+	color: #333;
+	font-size: 26px;
+	margin-top: 24px;
+}
+
+#section1 li > span {
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 24px;
+}
 /*记账头部*/
-#section1 > header {
+/*#section1 > header {
 	height: 120px;
 	padding-top: 10px;
 	box-sizing: border-box;
 	background: none;
 }
 
-		#section1 > header dl {
-			margin: 0;
-		}
+#section1 > header dl {
+	margin: 0;
+	}
 
-		#section1 > header dt:first-child {
-			width: 80%;
-			margin: 0 auto;
-			text-align: center;
-			border: 1px solid #e5dfdf;
-			border-radius: 30px;
-			height: 70px;
-			color: #aaa;
-			background-image: url(../svg/sales.svg);
-			background-repeat: no-repeat;
-			background-size: 60px 60px;
-			background-position: 45px 6px;
-			font-family: "黑体";
-			font-size: 16px;
-			line-height: 30px;
-			padding-left: 60px;
-			box-sizing: border-box;
-		}
+#section1 > header dt:first-child {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #e5dfdf;
+	border-radius: 30px;
+	height: 70px;
+	color: #aaa;
+	background-image: url(../svg/sales.svg);
+	background-repeat: no-repeat;
+	background-size: 60px 60px;
+	background-position: 45px 6px;
+	font-family: "黑体";
+	font-size: 16px;
+	line-height: 30px;
+	padding-left: 60px;
+	box-sizing: border-box;
+	}*/
 
-		/*收入和支出*/
-		#section1 > header dt:nth-of-type(2), #section1 > header dt:nth-of-type(3) {
-			display: inline-block;
-			width: 49%;
-			text-align: center;
-		}
-
-		#section1 > header dd, #btn-new {
-			display: none;
-		}
+/*收入和支出*/
+/*#section1 > header dt:nth-of-type(2), #section1 > header dt:nth-of-type(3) {
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+	}*/
 
 
-		/**/
+
+
+/*main高度*/
 #section1-swiper {
 	height: calc(100vh - 180px);
 }
@@ -130,44 +295,44 @@
 
 /*=========================设置==============================*/
 
-	#section4 ul {
+/*#section4 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#section4 ul > li {
 		margin: 0;
 		padding: 0;
-		list-style: none;
-	}
-
-	#section4 ul > li {
-		margin:0;
-		padding:0;
 		width: 100%;
-		height:10%;
+		height: 10%;
 		display: inline-block;
 		background-color: lightgray;
 		color: black;
 		margin-bottom: 1px;
 	}
 
-		#section4 > header figure {
-			margin: 0px;
-			padding: 0px;
-			width: 100%;
-			height: 250px;
-			background-repeat: no-repeat;
-			background-image: url('../img/background.jpg');
-			box-sizing: border-box;
-			padding-left: 35%;
-			padding-top: 40px;
-			margin-bottom:5px;
-		}
+#section4 > header figure {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-image: url('../img/background.jpg');
+	box-sizing: border-box;
+	padding-left: 35%;
+	padding-top: 40px;
+	margin-bottom: 5px;
+}
 
 
-	#section4 > header > figure img {
-		border-radius: 70px;
-	}
+#section4 > header > figure img {
+	border-radius: 70px;
+}
 
-	#section4 > header > figure figcaption {
-	font-size:35px;
-	color:white;
+#section4 > header > figure figcaption {
+	font-size: 35px;
+	color: white;
 }
 
 #section4 {
@@ -176,7 +341,7 @@
 
 	#section4 main {
 		height: calc(100vh - 310px);
-	}
+	}*/
 /*=========================设置==============================*/
 
 
@@ -191,7 +356,7 @@
 }
 
 /*当处于PC端的情况下，提示语出现*/
-@media(min-width:767px) {
+@media (min-width:767px) {
 	#no-support {
 		display: block;
 		font-size: 1.8rem;
