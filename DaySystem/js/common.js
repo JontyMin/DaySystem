@@ -74,7 +74,7 @@
 
 	//报表
 	
-	this.window.onload =function Dawr() {
+	function Dawr() {
 		var data = [
 
 			{ name: '吃饭', value: 40.0, color: '#4572a7' },
@@ -359,7 +359,7 @@
 
 	}
 	/* -----------------------------------------收入----------------------------------*/
-
+	Dawr();
 	[].slice.call(document.querySelectorAll("#section3 header nav a")).forEach(function (el) {
 		//el就是被遍历的每一个DOM元素
 		el.addEventListener("click", function () {
@@ -372,7 +372,7 @@
 
 
 
-	/**--------------年份--- -------------------*/
+	/**--------------年份----------------------*/
 	var months = ['2016年06月', '2016年07月', '2016年08月', '2016年09月', '2016年10月', '2016年11月', '2016年12月', '2017年01月', '2017年02月'];
 	var monthIndex = 4;/*默认选中下标为2的*/
 	//上一个月点击事件
