@@ -65,4 +65,17 @@
 			sensitivity: 0.8,
 		}
 	});
+
+	new Swiper("#section4-swiper", {
+		direction: "vertical",
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+		freeMode: true,
+		freeModeMomentum: true,
+		slidesPerView: "auto",
+		mousewheel: {
+			sensitivity: 0.8,
+		}
+	});
 });

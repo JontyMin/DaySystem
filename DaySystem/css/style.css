@@ -1,4 +1,5 @@
-﻿
+﻿/*#region 样式初始化 */
+
 /*重置0点,初始化样式*/
 * {
 	margin: 0;
@@ -10,11 +11,9 @@
 #swiper {
 	/*display:none;*/
 }
-
+/*#endregion */
 
 /*#region 底部导航栏样式 */
-
-/*=========================底部导航==========================*/
 
 /*nav样式*/
 #nav {
@@ -31,14 +30,14 @@
 	display: -webkit-box;
 	}
 /*nav>ul li样式*/
-#nav > ul > li {
-	/*transition: background linear 10s;*/ /*动画*/
+	#nav > ul > li {
+		/*transition: background linear 10s;*/ /*动画*/
 		-webkit-box-flex: 1;
 		text-align: center;
 		height: 60px;
 		/*background: #87f0d3;*/
-		border-right: 1px solid #0094ff;
-		border-top: 1px solid #399ef3;
+		border-right: 1px solid #30fafd;
+		border-top: 1px solid #30fafd;
 		box-sizing: border-box; /*内容包含边框*/
 		background-repeat: no-repeat; /*图片拉伸*/
 		background-size: 70% 70%;
@@ -47,9 +46,9 @@
 	}
 
 /*默认选中样式*/
-#nav > ul > li.selected {
-		border-bottom: 8px solid #0094ff;
-	}
+		#nav > ul > li.selected {
+			border-bottom: 8px solid #30fafd;
+		}
 
 /*背景图片*/
 #nav > ul > li:nth-child(1) {
@@ -69,16 +68,10 @@
 		border-right: none;
 	}
 
-/*=========================底部导航==========================*/
+
 /*#endregion */
 
-
 /*#region 高度设置 */
-
-
-
-
-/*======================设置内容块高度=======================*/
 
 #container > .swiper-container {
 	height: calc(100vh - 60px);
@@ -106,7 +99,7 @@ header {
 
 /*设置*/
 #section4-swiper {
-	
+	height: calc(100vh - 195px - 60px);
 }
 
 #section1-swiper .swiper-wrapper, #section2-swiper .swiper-wrapper, #section4-swiper .swiper-wrapper {
@@ -122,9 +115,7 @@ header {
 	padding: 10px;
 }
 
-/*======================设置内容块高度=======================*/
 /*#endregion */
-
 
 /*#region 记账界面 */
 
@@ -146,7 +137,7 @@ header {
 	width: 70%;
 	margin: 10px auto;
 	height: 60px;
-	border: 1px solid #0094ff; /*边框*/
+	border: 1px solid #30fafd; /*边框*/
 	border-radius: 200px; /*圆角*/
 	background-color: #fff;
 	background-image: url(../svg/sales.svg);
@@ -259,7 +250,6 @@ header {
 	background-position-y: 20px;
 }
 
-/*------------------------------------------*/
 /*记账明细*/
 #section1-swiper li {
 	height: 60px;
@@ -401,15 +391,13 @@ header {
 
 /*#endregion */
 
-
-/*=========================资金==============================*/
 /*#region 资金块样式 */
 
 /*头部样式*/
 #section2 > header {
 	height: 90px;
 	display: flex; /*弹性盒模型*/
-	border-bottom: 1px solid #0094ff;
+	border-bottom: 1px solid #30fafd;
 }
 #section2 .swiper-slide {
 	height:auto;
@@ -450,7 +438,7 @@ header {
 		margin: -1px auto;
 		line-height: 100px;
 		padding-left: 10px;
-		border-left: 1px solid #0094ff;
+		border-left: 1px solid #cafafb;
 	}
 
 #section2 > header > a {
@@ -517,10 +505,65 @@ header {
    
 }
 /*#endregion */
-/*=========================资金==============================*/
+
 /*=========================报表==============================*/
 /*=========================报表==============================*/
-/*=========================设置==============================*/
+
+/*#region 设置界面样式 */
+
+/*头部样式*/
+#section4 > header {
+	height: 200px;
+	width: 100%;
+	background-image: url('../img/background.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	text-align:center;
+	margin-top:-30px;
+	color:white;
+	font-size:25px;
+}
+/*头像样式*/
+#section4 > header img {
+	text-align: center;
+	margin-top: 30px;
+	border-radius: 50%;
+	border: 4px solid #fff;
+	color: #ccc;
+	font-size: 1rem;
+	height: 100px;
+	}
+
+/*main样式*/
+#section4-swiper li {
+	height: 60px;
+	line-height: 60px;
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: 0.5px solid #30fafd;
+}
+
+#section4-swiper .group {
+	border-bottom: 3px solid #30fafd;
+}
+
+#section4-swiper li > span:nth-of-type(2) {
+	float: right;
+	padding-right: 20px;
+}
+#section4-swiper li::after {
+	content: '';
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	float: right;
+	margin-right: 10px;
+	color: #30fafd;
+}
+
 /*#region 注释代码 */
 /*#section4 ul {
 	margin: 0;
@@ -570,8 +613,9 @@ header {
 		height: calc(100vh - 310px);
 	}*/
 /*#endregion */
-/*=========================设置==============================*/
-/*=========================设置提示语========================*/
+/*#endregion */
+
+/*#region 媒体查询 */
 /*提示语隐藏*/
 #no-support {
 	display: none;
@@ -590,6 +634,6 @@ header {
 		display: none;
 	}
 }
-/*=========================设置提示语========================*/
+/*#endregion */
 
 
