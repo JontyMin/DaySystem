@@ -1,4 +1,5 @@
-﻿/*重置0点,初始化样式*/
+﻿
+/*重置0点,初始化样式*/
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +11,8 @@
 	/*display:none;*/
 }
 
+
+/*#region 底部导航栏样式 */
 
 /*=========================底部导航==========================*/
 
@@ -67,6 +70,10 @@
 	}
 
 /*=========================底部导航==========================*/
+/*#endregion */
+
+
+/*#region 高度设置 */
 
 
 
@@ -90,17 +97,16 @@ header {
 
 /*资金*/
 #section2-swiper {
-	height: calc(100vh - 100px - 90px);
+	height: calc(100vh - 90px - 60px);
 }
-
 /*报表*/
 #section3-swiper {
-	height: calc(100vh - 190px - 20px);
+	
 }
 
 /*设置*/
 #section4-swiper {
-	height: calc(100vh - 190px - 20px);
+	
 }
 
 #section1-swiper .swiper-wrapper, #section2-swiper .swiper-wrapper, #section4-swiper .swiper-wrapper {
@@ -117,9 +123,10 @@ header {
 }
 
 /*======================设置内容块高度=======================*/
+/*#endregion */
 
 
-
+/*#region 记账界面 */
 
 /*=========================记账==============================*/
 
@@ -167,7 +174,6 @@ header {
 	color: #333;
 	font-size: 26px;
 	margin-top: -40px;
-	/* 穿透该层 */
 	pointer-events: none;
 }
 
@@ -334,9 +340,6 @@ header {
 .color6 {
 	color: #e260d0;
 }
-
-
-
 /*#region 修改前的代码 */
 
 /*记账头部*/
@@ -382,7 +385,7 @@ header {
 
 /*#endregion */
 /*=========================记账==============================*/
-
+/*#endregion */
 
 /*#region 我好难啊 */
 
@@ -399,8 +402,126 @@ header {
 /*#endregion */
 
 
+/*=========================资金==============================*/
+/*#region 资金块样式 */
 
+/*头部样式*/
+#section2 > header {
+	height: 90px;
+	display: flex; /*弹性盒模型*/
+	border-bottom: 1px solid #0094ff;
+}
+#section2 .swiper-slide {
+	height:auto;
+}
+
+#section2 > header > span {
+	flex: 1;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 80px;
+	color: #787474;
+	padding: 10px;
+	text-align: center;
+}
+
+#section2 > header > a {
+	width: 100px;
+	color: #d52b2b;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 120px;
+	font-size:20px;
+	text-align:right;
+	padding-right:20px;
+	}
+
+	#section2 > header > a::before {
+		content: "\e60d";
+		font-family: "iconfont" !important;
+		font-size: 30px;
+		font-style: normal;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke-width: 0.2px;
+		-moz-osx-font-smoothing: grayscale;
+		display: block;
+		position: absolute;
+		height: 90px;
+		margin: -1px auto;
+		line-height: 100px;
+		padding-left: 10px;
+		border-left: 1px solid #0094ff;
+	}
+
+#section2 > header > a {
+	float: right;
+	line-height: 100px;
+	}
+
+#section2 > header > a:active {
+	background-color: #ccc;
+	}
+
+/*main样式*/
+
+#section2-swiper li{
+	height:70px;
+	line-height:75px;
+	width:100%;
+	color:black;
+	border-radius:15px;
+	font-family:"楷体";
+	margin-top:10px;
+	float:left;
+}
+
+#section2-swiper span {
+	float:right;
+	margin-right:8px;
+}
+
+/*给li设置背景色*/
+#section2-swiper li:nth-child(1) {
+	background:#4cdef0;
+	margin-top:10px;
+}
+#section2-swiper li:nth-child(2) {
+	background:#4bd9f9;
+}
+
+#section2-swiper li:nth-child(3) {
+	background: #21b6ea;
+}
+
+#section2-swiper li:nth-child(4) {
+	background: #8fcaf7;
+}
+#section2-swiper li:nth-child(5) {
+	background: #b0d0f8;
+}
+#section2-swiper li:nth-child(6) {
+	background: #22f7df;
+}
+#section2-swiper a {
+	text-decoration:none;/*超链接去下划线*/
+}
+/*添加资金账户*/
+.add>a::before {
+    content:url(../svg/type/add.svg);
+    background-repeat:no-repeat;
+      
+}
+.add {
+   background-color:#78acfa;
+   text-align:center;
+   
+}
+/*#endregion */
+/*=========================资金==============================*/
+/*=========================报表==============================*/
+/*=========================报表==============================*/
 /*=========================设置==============================*/
+/*#region 注释代码 */
 /*#section4 ul {
 	margin: 0;
 	padding: 0;
@@ -448,13 +569,8 @@ header {
 	#section4 main {
 		height: calc(100vh - 310px);
 	}*/
+/*#endregion */
 /*=========================设置==============================*/
-
-
-
-
-
-
 /*=========================设置提示语========================*/
 /*提示语隐藏*/
 #no-support {
