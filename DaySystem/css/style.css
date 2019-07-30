@@ -47,7 +47,7 @@
 
 /*默认选中样式*/
 		#nav > ul > li.selected {
-			border-bottom: 8px solid #30fafd;
+			border-bottom: 8px solid #18d9fd;
 		}
 
 /*背景图片*/
@@ -94,7 +94,7 @@ header {
 }
 /*报表*/
 #section3-swiper {
-	
+	height: calc(100vh - 120px - 60px);
 }
 
 /*设置*/
@@ -117,7 +117,7 @@ header {
 
 /*#endregion */
 
-/*#region 记账界面 */
+/*#region 记账界面样式 */
 
 /*=========================记账==============================*/
 
@@ -391,7 +391,7 @@ header {
 
 /*#endregion */
 
-/*#region 资金块样式 */
+/*#region 资金界面样式 */
 
 /*头部样式*/
 #section2 > header {
@@ -506,8 +506,119 @@ header {
 }
 /*#endregion */
 
-/*=========================报表==============================*/
-/*=========================报表==============================*/
+/*#region 报表界面样式 */
+/*头部样式*/
+#section3 header nav {
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+
+#section3 header nav a {
+	text-decoration: none;
+	border: 1px solid #ccc;
+	color: #ccc;
+	padding: 4px;
+	}
+
+#section3 .swiper-slide {
+	height:auto;
+}
+
+#section3 a:nth-of-type(1) {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#section3 a:nth-of-type(2) {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+#section3 .selected {
+	color: red;
+	border-color: red;
+}
+
+
+/*年份*/
+
+#section3 header div {
+	height: 75px;
+	display: flex;
+	text-align: center;
+}
+
+#section3 #btn_prev_month {
+	flex: 1;
+	float: left;
+	line-height: 30px;
+}
+
+
+#section3 #lbl_month {
+	width: 100px;
+	line-height: 30px;
+}
+
+#section3 #btn_next_month {
+	flex: 1;
+	float: right;
+	line-height: 30px;
+}
+
+#section3-swiper #canvasLi {
+	margin: 0;
+	padding: 0;
+	border:0;
+}
+
+#section3-swiper #canvasLi {
+	height: 340px;
+	width: 100%;
+	background-color: white;
+}
+
+#section3-swiper li {
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	text-align: center;
+}
+
+	#section3-swiper li:nth-of-type(2) {
+		margin-top: 10px;
+	}
+
+#section3-swiper span:nth-of-type(1) {
+	width: 30px;
+	line-height: 50px;
+}
+
+#section3-swiper span:nth-of-type(2) {
+	width: 60px;
+	line-height: 50px;
+}
+
+#section3-swiper span:nth-of-type(3) {
+	width: 60px;
+	line-height: 50px;
+	flex: 1;
+}
+
+#section3-swiper span:nth-of-type(4) {
+	width: 45px;
+	line-height: 50px;
+}
+
+#section3-swiper span:nth-of-type(5) {
+	width: 20px;
+	line-height: 50px;
+}
+    
+
+
+/*#endregion */
 
 /*#region 设置界面样式 */
 
@@ -540,11 +651,11 @@ header {
 	line-height: 60px;
 	font-size: 13px;
 	font-weight: bold;
-	border-bottom: 0.5px solid #30fafd;
+	border-bottom: 0.5px solid #95f2f6;
 }
 
 #section4-swiper .group {
-	border-bottom: 3px solid #30fafd;
+	border-bottom: 3px solid #95f2f6;
 }
 
 #section4-swiper li > span:nth-of-type(2) {
@@ -561,7 +672,7 @@ header {
 	-moz-osx-font-smoothing: grayscale;
 	float: right;
 	margin-right: 10px;
-	color: #30fafd;
+	color: #95f2f6;
 }
 
 /*#region 注释代码 */
